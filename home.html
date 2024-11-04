@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Beranda Modern</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+
+    <header class="bg-white text-white p-6" style="background-image: url(h2.jpg); background-position: center; background-size: cover;">
+        <nav class="container mx-auto flex justify-between items-center mr-44"> 
+            <h1 class="text-3xl font-bold">PlayGame</h1>
+            <ul class="text-white flex space-x-6">
+                <li><a href="listgame.html" class="hover:underline">List game</a></li>
+                <li><a href="about.html" class="hover:underline">About</a></li>
+                <li><a href="topup.html" class="hover:underline">Top Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="bg-white" style="background-image: url(bg2.jpg); background-position: center; background-size: cover;">
+        <div class="container mx-auto flex flex-col md:flex-row items-center py-20">
+            <div class="md:w-1/2">
+                <h2 class="text-4xl font-bold text-white">Selamat Datang di PlayGame</h2>
+                <p class="mt-4 text-white">Kami menyediakan beberapa game terbaik untuk anda mainkan, ayo beli gamenya untuk menambah pengalaman bermain anda.</p>
+                <a href="#" class="mt-6 inline-block bg-red-500 text-white px-6 py-3 rounded-lg shadow hover:bg-red-600 transition">Cara Beli</a>
+            </div>
+            <div class="md:w-1/2 mt-10 md:mt-0 relative">
+                <div class="overflow-hidden relative">
+                    <div class="flex transition-transform duration-500" id="slider">
+                        <img src="1.jpg" alt="Slide 1" class="rounded-lg shadow-lg w-full">
+                        <img src="3.jpg" alt="Slide 2" class="rounded-lg shadow-lg w-full">
+                        <img src="kratos.jpg" alt="Slide 3" class="rounded-lg shadow-lg w-full">
+                        <img src="gta.jpg" alt="Slide 4" class="rounded-lg shadow-lg w-full">
+                    </div>
+                    <button class="absolute top-1/2 left-2 transform -translate-y-1/2 text-white bg-white bg-opacity-50 p-2 rounded-full" onclick="prevSlide()">❮</button>
+                    <button class="absolute top-1/2 right-2 transform -translate-y-1/2 text-white bg-white bg-opacity-50 p-2 rounded-full" onclick="nextSlide()">❯</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mx-auto text-center py-20">
+            <h2 class="text-3xl font-bold text-white">BANTUAN</h2>
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="text-white bg-white p-6 rounded-lg shadow ring-2 ring-white" style="background-image: url(bg2.jpg); background-position: center; background-size: cover;">
+                    <h3 class="text-xl font-semibold">LAYANAN</h3>
+                    <p class="mt-2 text-white">jika anda mengalami masalah silakan hubungi kami ==></p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow ring-2 ring-white" style="background-image: url(bg2.jpg); background-position: center; background-size: cover;">
+                    <h3 class="text-white text-xl font-semibold">KONTAK</h3>
+                    <div class="flex flex-col items-center mt-2 text-white">
+                        <a href="https://www.instagram.com/unknowsss_x/" class="flex items-center mb-4 hover:underline">
+                            <i class="fab fa-instagram mr-2"></i>
+                            Instagram
+                        </a>
+                        <a href="https://wa.me/6282117603282" class="flex items-center mb-4 hover:underline">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            WhatsApp
+                        </a>
+                        <a href="https://www.facebook.com/reza.pudaj" class="flex items-center hover:underline">
+                            <i class="fab fa-facebook mr-2"></i>
+                            Facebook
+                        </a>
+                    </div>
+                </div>
+                <div class="text-white bg-white p-6 rounded-lg shadow ring-2 ring-white" style="background-image: url(bg2.jpg); background-position: center; background-size: cover;">
+                    <h3 class="text-white text-xl font-semibold">LIVE CHAT</h3>
+                    <a href="https://www.facebook.com/reza.pudaj" class="flex items-center hover:underline">
+                        <i class="fab fa-message mr-2"></i>
+                        LiveChat
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            let currentIndex = 0;
+
+            function showSlide(index) {
+                const slides = document.getElementById('slider');
+                const totalSlides = slides.children.length;
+                currentIndex = (index + totalSlides) % totalSlides; // wrap around
+                slides.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
+            }
+
+            function nextSlide() {
+                showSlide(currentIndex + 1);
+            }
+
+            function prevSlide() {
+                showSlide(currentIndex - 1);
+            }
+        </script>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; PlayGame | <a href="#" class="hover:underline">Privacy Policy</a></p>
+            <p class="text-sm">Untuk bantuan lebih lanjut, hubungi <a href="mailto:support@playgame.com" class="hover:underline">support@playgame.com</a>.</p>
+        </div>
+    </footer>
+</body>
+</html>

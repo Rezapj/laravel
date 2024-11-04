@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Top Up - PlayGame</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="" style="background-image: url(bg2.jpg); background-position: center; background-size: cover;">
+
+    <header class="bg-white text-white p-6 relative" style="background-image: url(h2.jpg); background-position: center; background-size: cover;">
+        <div">
+            <nav class="container mx-auto flex justify-between items-center mr-96">
+                <h1 class="text-3xl font-bold">PlayGame</h1>
+                <ul class="flex space-x-6">
+                    <li><a href="home.html" class="hover:underline">Home</a></li>
+                    <li><a href="listgame.html" class="hover:underline">List Game</a></li>
+                    <li><a href="about.html" class="hover:underline">About</a></li>
+                    <li><a href="topup.html" class="hover:underline">Top Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto text-white my-10 p-6 bg-white rounded-lg shadow-lg" style="background-image: url(bg2.jpg); background-position: center; background-size: cover;">
+        <h2 class="text-3xl font-bold text-center mb-6">Top Up Saldo Anda</h2>
+        <div class="flex justify-center mb-6">
+            <span class="text-xl font-semibold text-white">Saldo Anda: <strong class="text-blue-600">Rp. 106.785.00</strong></span>
+        </div>
+        <form>
+            <div class="mb-4">
+                <label for="amount" class="block text-sm font-medium text-white">Jumlah Top Up</label>
+                <input type="number" id="amount" name="amount" required
+                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring focus:ring-blue-300"
+                    placeholder="Masukkan jumlah" />
+            </div>
+            <div class="mb-4">
+                <label for="payment-method" class="block text-sm font-medium text-white">Metode Pembayaran</label>
+                <select id="payment-method" name="payment-method" class="text-gray-700"
+                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring focus:ring-blue-300">
+                    <option value="bank">Transfer Bank</option>
+                    <option value="credit-card">Kartu Kredit</option>
+                    <option value="e-wallet">E-Wallet</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <label for="note" class="block text-sm font-medium text-white">Catatan (Opsional)</label>
+                <textarea id="note" name="note"
+                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring focus:ring-blue-300"
+                    rows="3" placeholder="Masukkan catatan"></textarea>
+            </div>
+            <button type="submit"
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-md transition">
+                Top Up Sekarang
+            </button>
+        </form>
+        <p class="mt-4 text-sm text-center text-white">
+            Dengan menekan tombol di atas, Anda setuju dengan 
+            <a href="#" class="text-blue-600 hover:underline">syarat dan ketentuan</a>.
+        </p>
+        
+        <div class="mt-10 p-4 bg-gray-50 rounded-md shadow-md">
+            <h3 class="text-lg font-semibold mb-2 text-gray-700">Info Tambahan:</h3>
+            <ul class="list-disc list-inside text-gray-700">
+                <li>Transaksi biasanya diproses dalam waktu 5 menit.</li>
+                <li>Pastikan jumlah yang Anda masukkan benar.</li>
+                <li>Jika mengalami masalah, silakan hubungi customer service kami.</li>
+            </ul>
+        </div>
+
+        <!-- Riwayat Transaksi -->
+        <div class="mt-10">
+            <h3 class="text-2xl font-semibold mb-4">Riwayat Transaksi</h3>
+            <table class="min-w-full bg-white rounded-lg shadow-md">
+                <thead>
+                    <tr class="bg-gray-200 text-gray-600 uppercase text-sm">
+                        <th class="py-3 px-4 text-left">Tanggal</th>
+                        <th class="py-3 px-4 text-left">Jumlah</th>
+                        <th class="py-3 px-4 text-left">Metode</th>
+                        <th class="py-3 px-4 text-left">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="hover:bg-gray-100">
+                        <td class="py-3 px-4 text-gray-700">01/11/2024</td>
+                        <td class="py-3 px-4 text-green-600">Rp 50.000</td>
+                        <td class="py-3 px-4 text-gray-700">Transfer Bank</td>
+                        <td class="py-3 px-4 text-green-500">Sukses</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100">
+                        <td class="py-3 px-4 text-gray-700">20/10/2024</td>
+                        <td class="py-3 px-4 text-red-600">Rp 30.000</td>
+                        <td class="py-3 px-4 text-gray-700">E-Wallet</td>
+                        <td class="py-3 px-4 text-red-500">Gagal</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100">
+                        <td class="py-3 px-4 text-gray-700">15/10/2024</td>
+                        <td class="py-3 px-4 text-green-600">Rp 20.000</td>
+                        <td class="py-3 px-4 text-gray-700">Kartu Kredit</td>
+                        <td class="py-3 px-4 text-green-500">Sukses</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Rekomendasi Top Up -->
+        <div class="mt-10 p-4 bg-gray-50 rounded-md shadow-md text-gray-700">
+            <h3 class="text-lg font-semibold mb-2">Rekomendasi Top Up</h3>
+            <p class="text-white">Pertimbangkan untuk melakukan top-up sebesar:</p>
+            <ul class="list-disc list-inside text-gray-700">
+                <li><strong>Rp 300.000:</strong> Cukup untuk beberapa game.</li>
+                <li><strong>Rp 500.000:</strong> Ideal untuk bermain beberapa game sekaligus.</li>
+                <li><strong>Rp 1000.000:</strong> Untuk pengalaman bermain maksimal!</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; PlayGame | <a href="#" class="hover:underline">Privacy Policy</a></p>
+            <p class="text-sm">Untuk bantuan lebih lanjut, hubungi <a href="mailto:support@playgame.com" class="hover:underline">support@playgame.com</a>.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
